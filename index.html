@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .header .nav {
+            display: flex;
+            align-items: center;
+        }
+        .header .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .header .nav a:hover {
+            color: #ccc;
+        }
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            flex-basis: 30%;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card p {
+            margin-bottom: 10px;
+        }
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .card ul li {
+            margin-bottom: 5px;
+        }
+        .card a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .card a:hover {
+            color: #666;
+        }
+        .card .skills {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .card .skills .skill {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            background-color: #ddd;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+        .card .skills .skill:hover {
+            background-color: #eee;
+        }
+        .card .skills .skill:last-child {
+            margin-right: 0;
+        }
+        .card .education {
+            margin-top: 20px;
+        }
+        .card .education h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card .education p {
+            margin-bottom: 10px;
+        }
+        .card .education .institution {
+            font-weight: bold;
+        }
+        .card .experience {
+            margin-top: 20px;
+        }
+        .card .experience h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card .experience p {
+            margin-bottom: 10px;
+        }
+        .card .experience .position {
+            font-weight: bold;
+        }
+        .card .experience .company {
+            font-weight: bold;
+            color: #337ab7;
+        }
+        .card .experience .dates {
+            font-size: 14px;
+            color: #666;
+        }
+        .card .experience .details {
+            margin-left: 20px;
+        }
+        .card .experience .details ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .card .experience .details ul li {
+            margin-bottom: 5px;
+        }
+        .card .experience .details a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .card .experience .details a:hover {
+            color: #666;
+        }
+        .card .experience .details .bullet {
+            margin-right: 5px;
+        }
+        .card .projects {
+            margin-top: 20px;
+        }
+        .card .projects h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card .projects p {
+            margin-bottom: 10px;
+        }
+        .card .projects a {
+            color: #337ab7;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .card .projects a:hover {
+            color: #23527c;
+        }
+       .card .projects .project {
+            margin-bottom: 10px;
+        }
+        .card .projects .project h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .card .projects .project p {
+            margin-bottom: 5px;
+        }
+        .card .projects .project a {
+            color: #337ab7;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .card .projects .project a:hover {
+            color: #23527c;
+        }
+        .card .projects .project .bullet {
+            margin-right: 5px;
+        }
+        @media (max-width: 768px) {
+            .card {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">My CV</div>
+            <nav class="nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+        <main class="main">
+            <div class="card">
+                <div class="skills">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">React</div>
+                    <div class="skill">Node.js</div>
+                </div>
+                <div class="education">
+                    <h2>Education</h2>
+                    <div class="institution">
+                        <h3>University of XYZ</h3>
+                        <p>Bachelor of Science in Computer Science</p>
+                        <p>Graduated in 2020</p>
+                    </div>
+                </div>
+                <div class="experience">
+                    <h2>Experience</h2>
+                    <div class="experience-item">
+                        <h3 class="position">Software Engineer</h3>
+                        <div class="company">ABC Company</div>
+                        <div class="dates">January 2021 - Present</div>
+                        <div class="details">
+                            <ul>
+                                <li>Developed multiple web applications using HTML, CSS, and JavaScript</li>
+                                <li>Collaborated with cross-functional teams to deliver projects on time</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <h3 class="position">Intern</h3>
+                        <div class="company">DEF Company</div>
+                        <div class="dates">June 2020 - August 2020</div>
+                        <div class="details">
+                            <ul>
+                                <li>Assisted in the development of a mobile app using Python and Django</li>
+                                <li>Participated in code reviews and ensured high-quality code delivery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects">
+                    <h2>Projects</h2>
+                    <div class="project">
+                        <h4>Personal Website</h4>
+                        <p>A responsive website built using HTML, CSS, and JavaScript</p>
+                        <a href="#">View Live</a>
+                    </div>
+                    <div class="project">
+                        <h4>To-Do List App</h4>
+                        <p>A web application built using Python and Flask</p>
+                        <a href="#">View Live</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
