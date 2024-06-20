@@ -15,13 +15,24 @@ html {
 body {
     font-family: Cambria, serif;
     font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
 }
 
 table {
-    width: 85%;
-    max-width: 85%;
+    width: 95%;
+    max-width: 95%;
+    min-width: 95%;
     margin: 0.5% auto;
     display: table;         
+}
+
+td {
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 
@@ -29,36 +40,240 @@ table {
 .container-wrapper {
     border-radius: 1vh;
     background-color: #E8E8E8;
+    width: 85vw;
+    margin: 0.5vh;
     padding: 1%;
-    margin: 1%;
+    overflow: auto;
+}
+
+#profile-header-section table [data-column="1"] {
+    /*border: 1px solid black;*/
+    text-align: center;
+    width: 75%
+}
+
+#profile-header-section table [data-column="2"] {
+    /*border: 1px solid black;*/
+    text-align: left;
+    width: 25%;
+}
+
+#profile-header-section img {
+    width: 5rem;
+    height: 5rem;   
+    display: inline;
+    vertical-align: middle;  
+}
+
+#profile-header-section a {
+    display: inline;
+    vertical-align: middle;    
 }
 
 #about-me-section img {
-    width: 20vw;
-    height: 35vh;
+    width: 10rem;
+    height: 15rem;    
+}
+
+#key-skills-section table {
+    border-collapse: separate;
+    border-spacing: 1vh;
 }
 
 #key-skills-section td {
-    border: 1px solid #000000;
-    border-radius: 1vh;
+    border: 0.2rem solid #000000;
+    border-radius: 1vh;    
     text-align: center;
     vertical-align: middle;
-    width: 25%;
-    height: 100%;
-    padding: 0.5%;
+    width: 25%;    
+    padding: 1%;
 }
 #work-experience-section table {
-    border: 1px solid #000000;
+    border: 0.2rem solid #000000;
     border-radius: 1vh;
+    table-layout: fixed;   
+    margin-bottom: 1vh; 
 }
 
 #work-experience-section td {    
     padding-left: 0.5%;
     padding-right: 0.5%;
-    font-weight: bold;
+    font-weight: bold;            
+}
+
+#work-experience-section table [data-column="1"] {
+    text-align: center;
+    width: 5%;
+    padding: 0;
+}
+
+#work-experience-section table [data-column="2"] { 
+    text-align: left;   
+    width: 60%;    
+}
+
+#work-experience-section table [data-column="3"] {
+    text-align: right;
+    width: 35%;    
 }
 
 #work-experience-section img {
-    width: 5em;
-    height: 5em;
+    width: 5rem;
+    height: 5rem;    
+}
+
+/* Education Section */
+#education-section table {
+    border: 0.2rem solid #000000;
+    border-radius: 1vh;
+    table-layout: fixed;   
+    margin-bottom: 1vh; 
+}
+
+#education-section td {    
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    font-weight: bold;            
+}
+
+#education-section table [data-column="1"] {
+    text-align: center;
+    width: 5%;
+    padding: 0;
+}
+
+#education-section table [data-column="2"] { 
+    text-align: left;   
+    width: 60%;    
+}
+
+#education-section table [data-column="3"] { 
+    text-align: right;   
+    width: 35%;    
+}
+
+#education-section img {
+    width: 5rem;
+    height: 5rem;    
+}
+
+/* Workshops */
+#education-section #industrial-workshops table {
+    border: 0.2rem solid #000000;    
+    border-radius: 1vh;    
+}
+
+#education-section #industrial-workshops tr {
+    border: none;
+}
+
+#education-section #industrial-workshops tr:nth-child(even):not(:first-child) {
+    background-color: #cccccc;
+}
+
+#education-section #industrial-workshops tr:nth-child(odd):not(:first-child) {
+    background-color: #999999;
+}
+
+#education-section #industrial-workshops th, #education-section #industrial-workshops td {
+    padding: 0.5%;    
+    word-wrap: break-word;
+}
+
+#education-section #industrial-workshops th {
+    font-weight: bold;  
+}
+
+#education-section #industrial-workshops td {
+    font-weight: normal;  
+}
+
+#education-section #industrial-workshops th:nth-child(1),
+#education-section #industrial-workshops td:nth-child(1) {
+    width: 12%;
+}
+
+#education-section #industrial-workshops th:nth-child(2),
+#education-section #industrial-workshops td:nth-child(2) {
+    width: 25%;
+}
+
+#education-section #industrial-workshops th:nth-child(3),
+#education-section #industrial-workshops td:nth-child(3) {
+    width: 15%;
+}
+
+#education-section #industrial-workshops th:nth-child(4),
+#education-section #industrial-workshops td:nth-child(4) {
+    width: 48%;
+}
+
+/* Professional Certifications */
+#professional-certifications-section table {
+    border: 0.2rem solid #000000;    
+    border-radius: 1vh;
+    border-spacing: 1;    
+}
+
+#professional-certifications-section tr {
+    border: none;
+}
+
+#professional-certifications-section tr:nth-child(even):not(:first-child) {
+    background-color: #cccccc;
+}
+
+#professional-certifications-section tr:nth-child(odd):not(:first-child) {
+    background-color: #999999;
+}
+
+#professional-certifications-section th, #professional-certifications-section td {
+    padding: 0.5%;    
+    word-wrap: break-word;    
+}
+
+#professional-certifications-section th {
+    font-weight: bold;  
+}
+
+#professional-certifications-section td {
+    font-weight: normal;  
+}
+
+#professional-certifications-section th:nth-child(1),
+#professional-certifications-section td:nth-child(1) {
+    width: 12%;
+}
+
+#professional-certifications-section th:nth-child(2),
+#professional-certifications-section td:nth-child(2) {
+    width: 25%;
+}
+
+#professional-certifications-section th:nth-child(3),
+#professional-certifications-section td:nth-child(3) {
+    width: 15%;
+}
+
+#professional-certifications-section th:nth-child(4),
+#professional-certifications-section td:nth-child(4) {
+    width: 48%;
+}
+
+/* Educational Projects */
+#educational-projects-section table {
+    border: 0.2rem solid #000000;
+    border-radius: 1vh;
+    table-layout: fixed;   
+    margin-bottom: 1vh; 
+}
+
+#educational-projects-section td {    
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    font-weight: bold;            
+}
+
+#educational-projects-section p {
+    font-weight: normal;
 }
