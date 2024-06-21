@@ -14,12 +14,26 @@ html {
 /* Body Styles */
 body {
     font-family: Cambria, serif;
-    font-size: 1.25rem;
+    font-size: 1.25rem;    
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: justify;
+    text-align: justify;    
+    background-image: linear-gradient(to right bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);  
+    /* Reference: https://mycolor.space/gradient3?ori=to+right+bottom&hex=%23D16BA5&hex2=%2386A8E7&hex3=%235FFBF1&submit=submit */  
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    margin: 0; /* added margin: 0 to remove default margin */
+    min-height: 100vh; /* changed to min-height to allow containers to expand */
+    min-width: 100vw; /* changed to min-width to allow containers to expand */  
+
+    /* Performance optimizations */
+    will-change: transform;
+    transform: translateZ(0);  
+    box-sizing: border-box;  
 }
 
 table {
@@ -33,18 +47,59 @@ table {
 td {
     word-wrap: break-word;
     hyphens: auto;
+    overflow: hidden;
 }
 
+h2 {
+    padding: 1%;
+}
 
 /* Container Wrapper Styles */
-.container-wrapper {
-    border-radius: 1vh;
-    background-color: #E8E8E8;
-    width: 85vw;
-    margin: 0.5vh;
-    padding: 1%;
-    overflow: auto;
+.container {    
+    width: 85vw;            
+    overflow-y: auto;        
+    margin: 1vh;
+    background: rgba(255, 255, 255, 0.05); /* added glass background */
+    backdrop-filter: blur(100vh); /* added blur effect */
+    border-radius: 1vh; /* added rounded corners */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* added subtle shadow */   
 }
+
+.container-wrapper {
+    /*border-radius: 1vh;*/          
+    padding: 1%;    
+    display: flex;
+    flex-direction: column;
+    margin: 2%;       
+}
+
+/*
+#profile-header-section {
+    --index: 1;
+}
+#about-me-section {
+    --index: 2;
+}
+#key-skills-section {
+    --index: 3;
+}
+#work-experience-section {
+    --index: 4;
+}
+#education-section {
+    --index: 5;
+}
+#professional-certifications-section {
+    --index: 6;
+}
+#educatoinal-projects-section {
+    --index: 7;
+}
+#contact-section {
+    --index: 8;
+}
+*/
+
 
 #profile-header-section table [data-column="1"] {
     /*border: 1px solid black;*/
@@ -75,6 +130,18 @@ td {
     height: 15rem;    
 }
 
+#about-me-section ul {
+    list-style: none;    
+    margin-left: 0; 
+    padding: 0; 
+
+}
+
+#about-me-section ul li {
+    display: inline;
+    padding-right: 1vw;
+}
+
 #key-skills-section table {
     border-collapse: separate;
     border-spacing: 1vh;
@@ -102,9 +169,9 @@ td {
 }
 
 #work-experience-section table [data-column="1"] {
-    text-align: center;
-    width: 5%;
+    text-align: center;    
     padding: 0;
+    width: 5rem;
 }
 
 #work-experience-section table [data-column="2"] { 
@@ -138,7 +205,7 @@ td {
 
 #education-section table [data-column="1"] {
     text-align: center;
-    width: 5%;
+    width: 5rem;
     padding: 0;
 }
 
@@ -276,4 +343,18 @@ td {
 
 #educational-projects-section p {
     font-weight: normal;
+}
+
+#contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#contact-section iframe {
+    border: none;
+    max-width: 82vw;
+    max-height: 100vh;    
+    overflow-x: hidden;
+    overflow-y: hidden;  
 }
