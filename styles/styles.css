@@ -9,17 +9,20 @@ html {
     /* For Firefox */
     -ms-overflow-style: none;
     /* For Internet Explorer and Edge */
+
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 /* Body Styles */
 body {
     font-family: Cambria, serif;
     font-size: 1.25rem;    
-    justify-content: center;
+    justify-content: center;    
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: justify;    
+    text-align: justify;   
+
     background-image: linear-gradient(to right bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);  
     /* Reference: https://mycolor.space/gradient3?ori=to+right+bottom&hex=%23D16BA5&hex2=%2386A8E7&hex3=%235FFBF1&submit=submit */  
     background-attachment: fixed;
@@ -28,12 +31,14 @@ body {
 
     margin: 0; /* added margin: 0 to remove default margin */
     min-height: 100vh; /* changed to min-height to allow containers to expand */
-    min-width: 100vw; /* changed to min-width to allow containers to expand */  
+    min-width: 100vw; /* changed to min-width to allow containers to expand */     
 
     /* Performance optimizations */
     will-change: transform;
     transform: translateZ(0);  
     box-sizing: border-box;  
+    scroll-behavior: smooth;    
+
 }
 
 table {
@@ -58,11 +63,7 @@ h2 {
 .container {    
     width: 85vw;            
     overflow-y: auto;        
-    margin: 1vh;
-    background: rgba(255, 255, 255, 0.05); /* added glass background */
-    backdrop-filter: blur(100vh); /* added blur effect */
-    border-radius: 1vh; /* added rounded corners */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* added subtle shadow */   
+    margin: 1vh;  
 }
 
 .container-wrapper {
@@ -71,6 +72,16 @@ h2 {
     display: flex;
     flex-direction: column;
     margin: 2%;       
+}
+
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1vh;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 /*
@@ -126,8 +137,8 @@ h2 {
 }
 
 #about-me-section img {
-    width: 10rem;
-    height: 15rem;    
+    width: 14vw;
+    height: 35vh; /* 2.5x of width */   
 }
 
 #about-me-section ul {
@@ -235,11 +246,11 @@ h2 {
 }
 
 #education-section #industrial-workshops tr:nth-child(even):not(:first-child) {
-    background-color: #cccccc;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 #education-section #industrial-workshops tr:nth-child(odd):not(:first-child) {
-    background-color: #999999;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 #education-section #industrial-workshops th, #education-section #industrial-workshops td {
@@ -249,6 +260,7 @@ h2 {
 
 #education-section #industrial-workshops th {
     font-weight: bold;  
+    background-color: rgba(255, 255, 255, 0.45);
 }
 
 #education-section #industrial-workshops td {
@@ -287,11 +299,11 @@ h2 {
 }
 
 #professional-certifications-section tr:nth-child(even):not(:first-child) {
-    background-color: #cccccc;
+    background-color: rgba(255, 255, 255, 0.25);    
 }
 
 #professional-certifications-section tr:nth-child(odd):not(:first-child) {
-    background-color: #999999;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 #professional-certifications-section th, #professional-certifications-section td {
@@ -301,6 +313,7 @@ h2 {
 
 #professional-certifications-section th {
     font-weight: bold;  
+    background-color: rgba(255, 255, 255, 0.45);
 }
 
 #professional-certifications-section td {
@@ -352,9 +365,101 @@ h2 {
 }
 
 #contact-section iframe {
-    border: none;
-    max-width: 82vw;
-    max-height: 100vh;    
-    overflow-x: hidden;
-    overflow-y: hidden;  
+    height: 80vh;
+    max-width: 95vw;
+    border-radius: 1vh;
 }
+
+#contact-section {
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Bar */
+:root{
+    --color-1: #0f1016;
+    --text-color: #f0f0f0;
+    --accent-color: #006aff;
+  }
+  nav {
+    height: 6vh; /* converted 60px to 6vh */    
+    /* background-color: var(--color-1); */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 1vh;
+    left: 1vw;
+    z-index: 10;    
+    transform: translateZ(0);
+    align-self: flex-start; /* Add this to overwrite the centering effect */
+  }
+  
+  .links-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 1vh;
+    left: -100vw; /* converted 300px to 100vw */    
+    z-index: 10;
+    width: auto; /* converted 300px to 30vw */
+    /*background-color: var(--color-1);*/
+    box-shadow: -0.5rem 0 0.5rem rgba(0, 0, 0, 0.25); /* converted 5px to 0.5rem */
+    transition: 0.75s ease-out;
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(1.25rem);
+    -webkit-backdrop-filter: blur(1.25rem);
+    
+    border-radius: 1vh;
+  }
+  
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 1.25rem 1.875rem; /* converted 20px 30px to 1.25rem 1.875rem */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: flex-start;
+    /*color: var(--text-color);*/
+    color: var(--color-1);
+  }
+  
+  nav a:hover {
+    background-color: var(--accent-color);
+  }
+  
+  nav .home-link {
+    margin-left: auto;
+  }
+  
+  nav svg {
+    /*fill: var(--text-color);*/
+    fill: var(--color-1);
+  }
+  
+  #sidebar-active {
+    display: none;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    left: 0;    
+  }
+  
+  #sidebar-active:checked ~ #overlay {
+    height: 100vh; /* converted 100% to 100vh */
+    width: 100vw; /* converted 100% to 100vw */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .open-sidebar-button, .close-sidebar-button {
+    padding: 1.25rem; /* converted 20px to 1.25rem */
+    display: block;
+  }
