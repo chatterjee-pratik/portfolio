@@ -10,7 +10,33 @@
 </head>
 
 <body>
-    <div class="container"> <div class="container-wrapper" id="profile-header-section">
+
+    <!-- Navigation Bar -->
+    <nav>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+          <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+          <label for="sidebar-active" class="close-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+          </label>
+              
+          <a class="home-link" href="#profile-header-container">Overview</a> 
+          <a href="#about-me-container">About Me</a> 
+          <a href="#key-skills-container">Key Skills</a>
+          <a href="#work-experience-container">Work Experience</a>
+          <a href="#education-container">Education and Workshops</a>
+          <a href="#professional-certifications-container">Professional Certifications</a>
+          <a href="#educational-projects-container">Educational Projects</a>
+          <a href="#contact-container">Contact Form</a>
+          
+        </div>
+    </nav>
+    
+
+    <div class="container glass" id="profile-header-container"> <div class="container-wrapper" id="profile-header-section">
         <table>
             <tr>
                 <td data-column="1">
@@ -19,7 +45,7 @@
                 </td>
                 <td data-column="2">
                     <img src="https://media.licdn.com/dms/image/C4D0BAQGyTLr4K-2jKw/company-logo_200_200/0/1631351134984?e=1726704000&v=beta&t=HpIXAalwVrCY5zxf2tP2KkQnZKsLizF79TsR6f_ozgg" />
-                    <a href="#work-experience-section">Deutsche Börse</a>
+                    <a href="#work-experience-container">Deutsche Börse</a>
                 </td>
             </tr>           
             <tr>
@@ -28,13 +54,13 @@
                 </td>
                 <td data-column="2">
                     <img src="https://media.licdn.com/dms/image/C560BAQHUKNuUNeNHZA/company-logo_200_200/0/1631355954413?e=1726704000&v=beta&t=vtK0KwBfacjytWtcpOnqMt13oYmyd0gYXyMS4OQuRDE" />
-                    <a href="#education-section">Universität des Saarlandes</a>
+                    <a href="#education-container">Universität des Saarlandes</a>
                 </td>
             </tr>            
         </table>
     </div> </div>
 
-    <div class="container"> <div class="container-wrapper" id="about-me-section">
+    <div class="container glass" id="about-me-container"> <div class="container-wrapper" id="about-me-section">
         <h2>About Me</h2>
         <table>
             <tr>
@@ -69,7 +95,7 @@
         </table>
     </div> </div>
 
-    <div class="container"> <div class="container-wrapper" id="key-skills-section">
+    <div class="container glass" id="key-skills-container"> <div class="container-wrapper" id="key-skills-section">
         <h2>Key Skills</h2>
         <table>
             <tr>
@@ -93,7 +119,7 @@
         </table>
     </div> </div>
 
-    <div class="container"> <div class="container-wrapper" id="work-experience-section">
+    <div class="container glass" id="work-experience-container"> <div class="container-wrapper" id="work-experience-section">
         <h2>Work Experience</h2>        
             <table>
                 <tr>
@@ -208,7 +234,7 @@
             </table>        
     </div> </div>
 
-    <div class="container"> <div class="container-wrapper" id="education-section">
+    <div class="container glass" id="education-container"> <div class="container-wrapper" id="education-section">
         <h2>Education</h2>        
         <table>
             <tr>
@@ -265,7 +291,7 @@
         </table>       
     </div> </div>
 
-    <div class="container"> <div class="container-wrapper" id="professional-certifications-section">
+    <div class="container glass" id="professional-certifications-container"> <div class="container-wrapper" id="professional-certifications-section">
         <h2>Professional Certifications</h2>        
         <table>
             <tr>
@@ -312,7 +338,7 @@
         </table>        
     </div> </div>
 
-    <div class="container"> <div class="container-wrapper" id="educational-projects-section">
+    <div class="container glass" id="educational-projects-container"> <div class="container-wrapper" id="educational-projects-section">
         <h2>Educational Projects</h2>
         <table>
             <tr>
@@ -346,9 +372,9 @@
         </table>        
     </div> </div>
 
-    <div class="container"> <div class="container-wrapper" id="contact-section">
+    <div class="container glass" id="contact-container"> <div class="container-wrapper" id="contact-section">
         
-        <iframe width="640px" height="640px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAERhHu5UMDFYME9BUEZLNVU0MkFCQTAzSEc0MENHUy4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" onload="setIFrameSize(this)" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>        
+        <iframe width="640px" height="640px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAERhHu5UMDFYME9BUEZLNVU0MkFCQTAzSEc0MENHUy4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" onload="resizeIframe(this)" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>        
 
     </div> </div>
 </body>
