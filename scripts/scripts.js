@@ -1,4 +1,4 @@
-/* Disable right click and copy and keypress*/
+/* Disable right click and copy and keypress
 document.addEventListener("contextmenu", function(event) {
     event.preventDefault();
   });
@@ -9,6 +9,15 @@ document.addEventListener("contextmenu", function(event) {
 
   document.addEventListener("keydown", function(event) {
     event.preventDefault();
+  }); */
+
+  window.addEventListener('resize', function() {
+    // Refresh the page when the screen dimensions change
+    location.reload();
+  });
+  window.addEventListener('orientationchange', function() {
+    // Refresh the page when the screen dimensions change
+    location.reload();
   });
 
 document.addEventListener("DOMContentLoaded", function() { 
@@ -27,7 +36,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelectorAll("#profile-header-section img").forEach(function(image) {
       image.style.setProperty("width", "4rem");
-      image.style.setProperty("height", "4rem");
+      image.style.setProperty("height", "4rem");      
+    });
+
+    document.querySelector("#profile-header-section table").querySelectorAll("td[data-column='2']").forEach(function(cell) {
+      cell.parentNode.removeChild(cell);
+    });
+    document.querySelector("#profile-header-section table").querySelectorAll("td[data-column='1']").forEach(function(cell) {
+      cell.style.setProperty("width", "100%");
+      var h3 = document.createElement("h3");
+      var workplace = document.createElement("a");
+      workplace.href = "#work-experience-container";
+      workplace.textContent = "Deütsche Borse";
+      h3.appendChild(workplace);
+      h3.appendChild(document.createTextNode(" \u2022 "));
+      var university = document.createElement("a");
+      university.href = "#education-container";
+      university.textContent = "Universität des Saarlandes";
+      h3.appendChild(university);
+      cell.appendChild(h3);
     });
 
     document.getElementById("profile-image").style.setProperty("display", "none");
