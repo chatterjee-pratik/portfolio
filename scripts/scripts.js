@@ -1,4 +1,4 @@
-/* Disable right click and copy and keypress
+/* Disable right click and copy and keypress */
 document.addEventListener("contextmenu", function(event) {
     event.preventDefault();
   });
@@ -9,7 +9,7 @@ document.addEventListener("contextmenu", function(event) {
 
   document.addEventListener("keydown", function(event) {
     event.preventDefault();
-  }); */
+  });
 
 window.addEventListener('resize', function () {
   // Refresh the page when the screen dimensions change
@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* Set mobile mode properties */
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 640) {
-    document.body.style.setProperty("font-size", "95%");
+    document.querySelectorAll(".container").forEach(function (container) {
+      container.style.setProperty("font-size", "0.95rem");
+    });
     //document.body.style.setProperty("font-size", (screen.width * 0.04) + "px");  
     document.querySelectorAll(".container-wrapper").forEach(function (container) {
       container.style.setProperty("width", "90vw");
@@ -64,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     profileImage.style.setProperty("display", "block");
     aboutMeSection.insertBefore(profileImage, aboutMeSection.querySelector("table"));
 
-    document.querySelectorAll("#about-me-section ul li").forEach(function(listItem) {
+    document.querySelectorAll("#about-me-section ul li").forEach(function (listItem) {
       listItem.style.setProperty("display", "block");
       listItem.style.setProperty("margin-bottom", "1vh");
     });
@@ -86,10 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
       node.style.setProperty("width", "4rem");
     });
     document.querySelectorAll('#work-experience-section table [data-column="2"]').forEach(function (node) {
-      node.style.setProperty("width", "50%");
+      node.style.setProperty("width", "55%");
     });
     document.querySelectorAll('#work-experience-section table [data-column="3"]').forEach(function (node) {
-      node.style.setProperty("width", "26%");
+      node.style.setProperty("width", "45%");
     });
     document.querySelectorAll('#work-experience-section img').forEach(function (image) {
       image.style.setProperty("width", "4rem");
@@ -100,10 +102,10 @@ document.addEventListener("DOMContentLoaded", function () {
       node.style.setProperty("width", "4rem");
     });
     document.querySelectorAll('#education-section table [data-column="2"]').forEach(function (node) {
-      node.style.setProperty("width", "50%");
+      node.style.setProperty("width", "55%");
     });
     document.querySelectorAll('#education-section table [data-column="3"]').forEach(function (node) {
-      node.style.setProperty("width", "26%");
+      node.style.setProperty("width", "45%");
     });
     document.querySelectorAll('#education-section img').forEach(function (image) {
       image.style.setProperty("width", "4rem");
@@ -111,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* Smooth Scrolling When Clicking Anchor Links */  
+  /* Smooth Scrolling When Clicking Anchor Links */
   const navLinks = document.querySelectorAll('.container a');
   // Add event listener to each link
   navLinks.forEach(link => {
@@ -120,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (href.charAt(0) === '#') {
         event.preventDefault();
         // Get the target section
-        const targetSection = document.querySelector(href);    
+        const targetSection = document.querySelector(href);
         // Scroll to the target section with smooth behavior
         targetSection.scrollIntoView({ behavior: 'smooth' });
         // Close the navigation menu
@@ -129,8 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   /* Smooth Scrolling When Clicking Anchor Links */
-
-
 
 });
 
@@ -141,7 +141,6 @@ function resizeIframe(iframe) {
     var iframeHeight = iframeBody.scrollHeight;
     iframe.width = iframeWidth + "px";
     iframe.height = iframeHeight + "px";
-  });
-}
+  });  
 
-/* */
+}
