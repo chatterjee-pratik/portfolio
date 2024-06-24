@@ -8,8 +8,7 @@ html {
     scrollbar-width: none;
     /* For Firefox */
     -ms-overflow-style: none;
-    /* For Internet Explorer and Edge */
-    scroll-behavior: smooth;
+    /* For Internet Explorer and Edge */    
 }
 
 body {
@@ -30,7 +29,8 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    font-family: Cambria, serif;
+    font-family: Cambria, Georgia, serif;
+    font-size: 1.25rem;       
 }
 
 .container section {
@@ -42,10 +42,13 @@ body {
     width: auto;
     min-height: 100vh;
     height: auto;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     scroll-snap-stop: always;
     overflow-y: auto;
     word-break: break-word;
+    padding-bottom: 15vh;
+    padding-top: 2vh;
+    font-size: inherit;
 }
 
 .container section table {
@@ -53,7 +56,8 @@ body {
     max-width: 95%;
     min-width: 95%;
     margin: 0.5% auto;
-    display: table;
+    display: table;    
+    font-size: inherit;
 }
 
 .container section td {
@@ -62,14 +66,14 @@ body {
 }
 
 .container section h2 {
-    padding: 1%;
+    padding: 1%;    
 }
 
 .container section .container-wrapper {
     border-radius: 1vh;
     padding: 1%;
     margin: 2%;
-    width: 85vw;
+    width: 85vw;    
 }
 
 .glass-box {
@@ -218,63 +222,59 @@ body {
     height: 5rem;
 }
 
-#education-section #industrial-workshops table {
-    border: 0.2rem solid #000000;
-    border-radius: 1vh;
-}
-
-#education-section #industrial-workshops tr {
-    border: none;
-}
-
-#education-section #industrial-workshops tr:nth-child(even):not(:first-child) {
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-#education-section #industrial-workshops tr:nth-child(odd):not(:first-child) {
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-#education-section #industrial-workshops th,
-#education-section #industrial-workshops td {
-    padding: 0.5%;
-    word-wrap: break-word;
-}
-
-#education-section #industrial-workshops th {
-    font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.45);
-}
-
-#education-section #industrial-workshops td {
-    font-weight: normal;
-}
-
-#education-section #industrial-workshops th:nth-child(1),
-#education-section #industrial-workshops td:nth-child(1) {
-    width: 12%;
-}
-
-#education-section #industrial-workshops th:nth-child(2),
-#education-section #industrial-workshops td:nth-child(2) {
-    width: 25%;
-}
-
-#education-section #industrial-workshops th:nth-child(3),
-#education-section #industrial-workshops td:nth-child(3) {
-    width: 15%;
-}
-
-#education-section #industrial-workshops th:nth-child(4),
-#education-section #industrial-workshops td:nth-child(4) {
-    width: 48%;
-}
-
+#industrial-workshops,
 #professional-certifications-section table,
 #educational-projects-section table {
     border: 0.2rem solid #000000;
     border-radius: 1vh;
-    border-spacing: 1;
+    border-spacing: 0.2vw;
+}
+
+#industrial-workshops tr {
+    border: none;
+}
+
+#industrial-workshops tr:nth-child(even):not(:first-child) {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+#industrial-workshops tr:nth-child(odd):not(:first-child) {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+#industrial-workshops th,
+#industrial-workshops td {
+    padding: 0.5%;
+    word-wrap: break-word;
+}
+
+#industrial-workshops th {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+#industrial-workshops td {
+    font-weight: normal;
+}
+
+#industrial-workshops th:nth-child(1),
+#industrial-workshops td:nth-child(1) {
+    width: 12%;
+}
+
+#industrial-workshops th:nth-child(2),
+#industrial-workshops td:nth-child(2) {
+    width: 25%;
+}
+
+#industrial-workshops th:nth-child(3),
+#industrial-workshops td:nth-child(3) {
+    width: 15%;
+}
+
+#industrial-workshops th:nth-child(4),
+#industrial-workshops td:nth-child(4) {
+    width: 48%;
 }
 
 #professional-certifications-section tr,
@@ -337,7 +337,7 @@ body {
 }
 
 #contact-section iframe {
-    height: 80vh;
+    min-height: 90vh;
     max-width: 95vw;
     border-radius: 1vh;
 }
@@ -430,7 +430,7 @@ nav svg {
 }
 
 #sidebar-active:checked~.links-container {
-    left: 0;
+    left: 1vw;
 }
 
 #sidebar-active:checked~#overlay {
@@ -449,4 +449,21 @@ nav svg {
     padding: 1.25rem;
     /* converted 20px to 1.25rem */
     display: block;
+}
+
+/* Footer Section */
+footer {    
+    min-height: 5vh;        
+    background-color: #0f1016;
+    color: #f0f0f0;
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+    padding: 5%;    
+    text-align: justify;
+    text-align-last: center;
+}
+
+footer p {
+    word-wrap: break-word;
+    max-width: 85vw;
 }
