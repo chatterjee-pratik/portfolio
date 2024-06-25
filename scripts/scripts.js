@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("profile-image").style.setProperty("display", "none");
     const aboutMeSection = document.getElementById("about-me-section");
     const profileImage = document.createElement("img");
-    profileImage.src = "https://media.licdn.com/dms/image/D4E03AQHd_0TJhZD80A/profile-displayphoto-shrink_400_400/0/1719299745736?e=1724889600&v=beta&t=dCfhovFJ-2YR7eGKGHnFYPYzBU1LbHDJphWfnFAdQ-s";
+    profileImage.src = "https://media.licdn.com/dms/image/D4E03AQH_4RrO8-iklA/profile-displayphoto-shrink_800_800/0/1719311952018?e=1724889600&v=beta&t=IfsVvRQ_yEak54FfVuFl9NzA9plOl0FtrOPvazL8NYo";
     profileImage.style.setProperty("width", "10rem");
     profileImage.style.setProperty("height", "10rem");
     profileImage.style.setProperty("border-radius", "50%");
