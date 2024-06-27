@@ -143,6 +143,10 @@ body {
     padding-right: 1vw;
 }
 
+#about-me-section p:nth-child(1) {
+    padding-right: 5%;    
+}
+
 #key-skills-section table {
     border-collapse: separate;
     border-spacing: 1vh;
@@ -162,6 +166,10 @@ body {
     border-radius: 1vh;
     table-layout: fixed;
     margin-bottom: 1vh;
+}
+
+#work-experience-section table tr:nth-child(3) td {
+    font-weight: normal;
 }
 
 #work-experience-section td {
