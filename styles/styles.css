@@ -95,6 +95,7 @@ body {
 #profile-header-section table [data-column="2"] {
     text-align: left;
     width: 25%;
+    white-space: nowrap;
 }
 
 #profile-header-section img {
