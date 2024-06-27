@@ -43,6 +43,10 @@ setBorderRadius(professionalCertificationsTable);
 setBorderRadius(industrialWorkshopsTable);
 setBorderRadius(professionalCertificationsTable);
 
+document.querySelector("#contact-section iframe").addEventListener("load", function() {
+  resizeIframe(this);
+});
+
   /* Set mobile mode properties */
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 640) {
     document.querySelectorAll(".container").forEach(function (container) {
@@ -88,12 +92,14 @@ setBorderRadius(professionalCertificationsTable);
     profileImage.style.setProperty("display", "block");
     aboutMeSection.insertBefore(profileImage, aboutMeSection.querySelector("table"));
 
-    document.getElementById('about-me-section').querySelector('table').querySelectorAll('p')[0].style.setProperty("text-align", "justify");
-
     document.querySelectorAll("#about-me-section ul li").forEach(function (listItem) {
       listItem.style.setProperty("display", "block");
       listItem.style.setProperty("margin-bottom", "1vh");
     });
+
+    document.querySelector("#about-me-section p:nth-child(1)").style.setProperty("padding-right", "0");
+    document.querySelector("#about-me-section p:nth-child(1)").style.setProperty("text-align", "justify");
+    document.querySelector("#about-me-section table tr:nth-child(1) td:nth-child(2)").remove();
 
     document.querySelectorAll("#key-skills-section table").forEach(function (table) {
       const rows = table.rows;
