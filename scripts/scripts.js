@@ -90,6 +90,7 @@ document.querySelector("#contact-section iframe").addEventListener("load", funct
     profileImage.style.setProperty("margin", "0 auto");
     profileImage.style.setProperty("margin-bottom", "1vh");
     profileImage.style.setProperty("display", "block");
+    profileImage.style.setProperty("box-shadow", "0px 1.2px 3.6px rgba(0, 0, 0, 0.16), 0px 6.4px 14.4px rgba(0, 0, 0, 0.2)");
     aboutMeSection.insertBefore(profileImage, aboutMeSection.querySelector("table"));
 
     document.querySelectorAll("#about-me-section ul li").forEach(function (listItem) {
