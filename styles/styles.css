@@ -58,7 +58,8 @@ body {
     min-width: 95%;
     margin: 0.5% auto;
     display: table;    
-    font-size: inherit;        
+    font-size: inherit;   
+    margin-bottom: 1vh; 
 }
 
 .container section td {
@@ -356,7 +357,7 @@ body {
 
 #contact-section iframe {
     min-height: 90vh;
-    max-width: 95vw;
+    width: 100%;
     border-radius: 1vh;
 }
 
@@ -415,6 +416,7 @@ nav {
     -webkit-backdrop-filter: blur(1.25rem);
 
     border-radius: 1vh;
+    box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.16), 0px 6.4px 14.4px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
@@ -482,7 +484,7 @@ footer {
     background-color: #0f1016;
     color: #f0f0f0;
     scroll-snap-stop: always;
-    scroll-snap-align: end;
+    scroll-snap-align: center;
     padding: 5%;       
     text-align: justify;
     text-align-last: center;
