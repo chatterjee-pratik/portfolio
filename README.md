@@ -11,9 +11,8 @@ The contact form may not load on devices with smaller screens (eg., iPhone 5/5s)
 **External References:**
 1. [Scroll Snapping](https://youtu.be/pNPkVQD7vlM)
 2. [Scroll Snap with Revealing Footer](https://youtu.be/I-xHQ0SRTo0)
-3. [KindPNG](https://www.kindpng.com) (.png for Microsoft Forms icon and Favicon)
-4. [LinkedIn](https://www.linkedin.com) (for all other images used on the website). The images are not hosted or uploaded on the website. It only links to the LinkedIn media and hence does not violate any copyright laws and regulations.
-5. [Microsoft Forms](https://www.forms.microsoft.com) (for the contact form)
+3. [LinkedIn](https://www.linkedin.com) (for all other images used on the website). The images are not hosted or uploaded on the website. It only links to the LinkedIn media and hence does not violate any copyright laws and regulations.
+4. [Microsoft Forms](https://www.forms.microsoft.com) (for the contact form)
 
 **Disclaimer:**
 <br>
