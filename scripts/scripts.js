@@ -70,7 +70,7 @@ document.querySelector("#contact-section iframe").addEventListener("load", funct
       var h3 = document.createElement("h3");
       var workplace = document.createElement("a");
       workplace.href = "#section-4";
-      workplace.textContent = "Deütsche Borse";
+      workplace.textContent = "Deutsche Börse";
       h3.appendChild(workplace);
       h3.appendChild(document.createTextNode(" \u2022 "));
       var university = document.createElement("a");
