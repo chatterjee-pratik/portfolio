@@ -83,7 +83,7 @@ document.querySelector("#contact-section iframe").addEventListener("load", funct
     document.getElementById("profile-image").style.setProperty("display", "none");
     const aboutMeSection = document.getElementById("about-me-section");
     const profileImage = document.createElement("img");
-    profileImage.src = "https://media.licdn.com/dms/image/v2/D4E03AQFzxkDZQVzL3w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719313514606?e=1730332800&v=beta&t=2A9GgQdescSgbBWODTJn6-RBr6AiFuQc0eS0bROcBjQ";
+    profileImage.src = "https://media.licdn.com/dms/image/v2/D4E03AQFzxkDZQVzL3w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719313514606?e=1738800000&v=beta&t=4Bo1A0y0y2PI_paT25uWM90I6-4gG4FvYGGY7oFDLUw";
     profileImage.style.setProperty("width", "10rem");
     profileImage.style.setProperty("height", "10rem");
     profileImage.style.setProperty("border-radius", "50%");
